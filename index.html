@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Author: R. Rosen, Illustrator: R. Rosen, Ideas: Shrek-based">
+    <title>Roni Rosen</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <video id="gif" src="pics/swamp.mp4"></video>
+    <h1>Waddup yo</h1>
+    <div id="top" class="center">
+      <img id="me" src="pics/me.jpeg" onclick="playSound(); playVideo()" title="Click me if you dare" alt="Me">
+      <!-- The onclick attribute calls the JavaScript functions playSound() and playGif() when the image is clicked -->
+    </div>
+    <div class="center">
+      <button id="target" onclick="surprise()">Surprise! :)</button>
+    </div>
+    <!-- The onclick attribute calls the JavaScript function surprise() when the button is clicked -->
+    <nav>
+      <button onclick="toggleNav()"><span>&#8801</span><span>&#8801</span><span>&#8801</span></button>
+      <ul id="nav-menu">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#employment">Employment</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#target">Surprise</a></li>
+      </ul>
+    </nav>
+    <!-- The <a> elements with href attributes linking to "#about", "#education", "#employment", "#hobbies",
+      "#contact" and "#target" are used for navigation within the page, when clicked they will take the user
+      to the corresponding element with the matching id -->
+    <h2 id="about">About Me</h2>
+    <div class="text leftalign">
+    <p class="about-me">Hi, I'm Roni. I'm 24 years old from Herzliya, originally from Rishon Lezion, and currently a 2nd year computer science student at Reichman University.
+      Ever since I was a child I loved gaming, especially League of Legends (LOL) and World of Warcraft (WOW).
+      My dream is to develop a game myself that I will enjoy playing.
+      And now, I'm working on making the dream come true by learning programming languages, and I'm sure that one day I'll be number one in my own game.
+      So far i've learned Java, C, SQL ,Python, JavaScript, HTML and CSS. </p>
+    </div>
+    <h2 id="education">Education</h2>
+    <div class="text leftalign">
+      Graduated highschool (gifted class) with great honors.<br>
+      Studied Physics, Chemistry and Yidish.<br>
+      Bachelor's degree in Computer Science from Reichman University
+    </div>
+    <h2 id="employment">Employment</h2>
+    <div class="text leftalign">
+    Operations Professional Team Lead at <a href="https://fibotax.com/" target="_blank">Fibo</a> - a B2C fintech startup
+        <ul>
+          <li>Operating the company's technological systems such as internal CRM, automations,
+            databases and all the tools developed by Fibo.</li>
+          <li>Leading the operation aspects in the company and being responsible for training
+            Operations employees.</li>
+          <li>Characterizing of automations and accompanying the R&D team in the process.</li>
+          <li>QA of new features- defining and investigating bugs, optimization and feature requests.</li>
+        </ul>
+        Future STEP intern at Google
+    </div>
+    <h2 id="hobbies">Hobbies</h2>
+    <div class="text centeralign">
+      Basketball<br>
+      <div class="center pics">
+        <img src="pics/basketball.jpg" alt="basketball">
+      </div>
+      Scubadiving<br>
+      <div class="center pics">
+        <img src="pics/turtle.jpg" alt="seaturtle">
+      </div>
+      Netflix<br>
+      <div class="center pics">
+        <img src="pics/netflix.jpg" alt="netflix">
+      </div>
+      Gaming
+      <div class="center pics">
+        <img src="pics/gaming.jpg" alt="gaming">
+      </div>
+    </div>
+    <h2 id="contact">Contact</h2>
+    <div class="text centeralign">
+    <form id="contact-form" method="post" onsubmit="return sendEmail(); validateForm(); clearForm();">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>

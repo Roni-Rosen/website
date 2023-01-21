@@ -1,0 +1,186 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* my picture and effects styling */
+
+#me {
+    width: 269px;
+    height: 200px;
+    cursor: pointer;
+}
+#me:hover {
+    content: url("pics/shrek2.jpg"); /* change the image source on hover */
+}
+#gif {
+    width: 269px;
+    height: 200px;
+    display:none; 
+    position:absolute; 
+    top:0; 
+    left:0;
+}
+
+
+/* navigation bar styling */
+nav button {
+    width: 140px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+nav button:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+nav ul {
+    width: 140px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #333;
+    position: fixed;
+    left: 10px;
+    top: 55px;
+    display: none;
+}
+nav li {
+    float: none;
+}
+nav a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: rgb(41, 35, 35);
+}
+
+/* general styling */
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pics img {
+    width: 300px;
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+h2 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+.text {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #333; 
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto; 
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+.centeralign {
+    text-align: center;
+}
+.leftalign {
+    text-align: left;
+}
+
+/* education section styling */
+#education ul {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+#education li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+/* contact section styling */
+  #contact {
+    text-align: center;
+    padding: 50px;
+  }
+  #contact h2 {
+    margin-bottom: 30px;
+  }
+  #contact-form {
+    display: inline-block;
+    text-align: left;
+  }
+  #contact-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  #contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  #contact-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  #contact-form button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+/* surprise button */
+#target {
+    position: absolute;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Create the keyframe animation for the fireworks */
+@keyframes fireworks {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0;
+    }
+}
+/* Create the fireworks effect using the :before and :after pseudo-elements */
+#target:before, #target:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, #ff0000, #ffff00, #00ff00, #0000ff, #ff00ff, #ff0000);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+/* Add the animation to the :before and :after elements when the button is clicked */
+#target:active:before, #target:active:after {
+    animation: fireworks 0.5s ease-out infinite;
+}
+#target:active:before {
+  animation-delay: 0.1s;
+}
